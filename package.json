@@ -1,13 +1,15 @@
 {
   "name": "econome",
-  "license": "0BSD",
+  "license": "MIT",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "./app/index.ts",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
+    "android": "expo -c start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md}\""
   },
   "dependencies": {
     "expo": "~52.0.39",
@@ -18,6 +20,9 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react-native": "^5.0.0",
+    "prettier": "^3.5.3",
     "typescript": "^5.3.3"
   },
   "private": true
