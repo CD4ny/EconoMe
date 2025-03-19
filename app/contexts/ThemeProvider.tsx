@@ -1,8 +1,9 @@
 // src/context/ThemeContext.tsx
 import React, { createContext, useContext, useState } from 'react';
 import { Light, Dark } from '../constants/Colors';
+import * as NavigationBar from 'expo-navigation-bar';
 
-type Theme = {
+export type Theme = {
   colors: typeof Light | typeof Dark;
 };
 
@@ -12,7 +13,9 @@ type ThemeContextType = {
   toggleTheme: () => void;
 };
 
-export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContextType | undefined>(
+  undefined,
+);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -24,6 +27,8 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const theme = {
     colors: isDarkMode ? Dark : Light,
   };
+
+  NavigationBar.setBackgroundColorAsync(theme.colors.neutral);
 
   return (
     <ThemeContext.Provider value={{ theme, isDarkMode, toggleTheme }}>
