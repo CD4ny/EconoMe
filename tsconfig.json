@@ -1,6 +1,17 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "baseUrl": "./", // Base directory for non-relative imports
+    "paths": {
+      "@assets/*": ["src/assets/*"],         // Alias for assets folder
+      "@components/*": ["src/components/*"], // Alias for components folder
+      "@constants/*": ["src/constants/*"],   // Alias for components folder
+      "@contexts/*": ["src/contexts/*"],     // Alias for components folder
+      "@hooks/*": ["src/hooks/*"],           // Alias for screens folder
+      "@styles/*": ["src/styles/*"],         // Alias for utils folder
+      "@pages/*": ["src/pages/*"],           // Alias for utils folder
+    }
   }
+
 }

@@ -106,25 +106,183 @@ export const Pallette = {
 //     text: '#f5f5f5', // Light text (white-ish)
 //     textSecondary: '#c2c5bb', // Original neutral color for secondary text
 //   };
+// export const Light = {
+//   primary: Pallette.pine_green.DEFAULT, // Teal (#157a6e)
+//   secondary: Pallette.shamrock_green.DEFAULT, // Green (#499f68)
+//   tertiary: Pallette.cambridge_blue.DEFAULT, // Light green (#77b28c)
+//   neutral: Pallette.baby_powder[500], // Light gray (#fffffa)
+//   neutralDark: '#2e2e2e',
+//   neutralLight: Pallette.baby_powder[600], // White-ish (#fffffb)
+//   accent: Pallette.burnt_sienna.DEFAULT, // Coral red (#e26d5a)
+//   text: Pallette.pine_green[100], // Dark text (#041816)
+//   textPrimary: Pallette.baby_powder[500], // Light text (#fffffa)
+//   textSecondary: Pallette.shamrock_green[100], // Slightly lighter dark text (#0e1f15)
+// } as const;
+
+// export const Dark = {
+//   primary: Pallette.pine_green[300], // Darker teal (#0c4942)
+//   secondary: Pallette.shamrock_green[300], // Darker green (#2b5e3e)
+//   tertiary: Pallette.cambridge_blue[300], // Darker light green (#407251)
+//   neutral: Pallette.pine_green[100], // Very dark gray (#041816)
+//   neutralLight: Pallette.shamrock_green[200], // Slightly lighter gray (#1d3f29)
+//   neutralDark: '#2e2e2e',
+//   accent: Pallette.burnt_sienna[500], // Slightly darker coral red (#e26d5a)
+//   text: Pallette.baby_powder[500], // Light text (#fffffa)
+//   textPrimary: Pallette.baby_powder[500], // Light text (#fffffa)
+//   textSecondary: Pallette.ash_gray.DEFAULT, // Original neutral color for secondary text (#c2c5bb)
+// } as const;
+
+// export const Light = {
+//   // Primary Colors (Red, Yellow, Green)
+//   red: {
+//     primary: '#e26d5a', // Coral Red
+//     secondary: '#ff8a7b', // Lighter Coral Red
+//     tertiary: '#f9e2de', // Very Light Coral Red (Background-like tone)
+//   },
+//   yellow: {
+//     primary: '#ffe082', // Warm Yellow
+//     secondary: '#fff3bf', // Light Yellow
+//     tertiary: '#fff9e6', // Very Light Yellow (Background-like tone)
+//   },
+//   green: {
+//     primary: '#499f68', // Shamrock Green
+//     secondary: '#8ccaa3', // Lighter Shamrock Green
+//     tertiary: '#d9ede0', // Very Light Shamrock Green (Background-like tone)
+//   },
+//   // Neutral Backgrounds
+//   neutral: '#f5f5f5', // Light Gray (Main Background)
+//   neutralLight: '#ffffff', // Pure White (Cards, Surfaces)
+//   neutralDark: '#e0e0e0', // Slightly Darker Gray (Borders, Subtle Accents),
+//   // Text Colors
+//   text: '#1a1a1a', // Dark Text
+//   textPrimary: '#1a1a1a', // Primary Dark Text
+//   textSecondary: '#424242', // Secondary Dark Text
+// } as const;
+
+// export const Dark = {
+//   // Primary Colors (Red, Yellow, Green)
+//   red: {
+//     primary: '#ff312e', // Bright Red
+//     secondary: '#e85b58', // Slightly Darker Red
+//     tertiary: '#360f09', // Very Dark Red (Background-like tone)
+//   },
+//   yellow: {
+//     primary: '#ffb74d', // Warm Yellow
+//     secondary: '#e6a73b', // Slightly Darker Yellow
+//     tertiary: '#2e2413', // Very Dark Yellow (Background-like tone)
+//   },
+//   green: {
+//     primary: '#2e7d5a', // Dark Shamrock Green
+//     secondary: '#4a8d6e', // Slightly Lighter Green
+//     tertiary: '#15261b', // Very Dark Green (Background-like tone)
+//   },
+//   // Neutral Backgrounds
+//   neutral: '#1a1a1a', // Dark Gray (Main Background)
+//   neutralLight: '#2e2e2e', // Slightly Lighter Gray (Cards, Surfaces)
+//   neutralDark: '#000000', // Pure Black (Borders, Subtle Accents),
+//   // Text Colors
+//   text: '#f5f5f5', // Light Text
+//   textPrimary: '#ffffff', // Primary Light Text
+//   textSecondary: '#c2c5bb', // Secondary Light Text
+// } as const;
+
+
 export const Light = {
-  primary: Pallette.pine_green.DEFAULT, // Teal (#157a6e)
-  secondary: Pallette.shamrock_green.DEFAULT, // Green (#499f68)
-  tertiary: Pallette.cambridge_blue.DEFAULT, // Light green (#77b28c)
-  neutral: Pallette.baby_powder[500], // Light gray (#fffffa)
-  neutralLight: Pallette.baby_powder[600], // White-ish (#fffffb)
-  accent: Pallette.burnt_sienna.DEFAULT, // Coral red (#e26d5a)
-  text: Pallette.pine_green[100], // Dark text (#041816)
-  textSecondary: Pallette.shamrock_green[100], // Slightly lighter dark text (#0e1f15)
-};
+  // Primary Colors (Red, Yellow, Green)
+  red: {
+    primary: '#e26d5a', // Coral Red
+    secondary: '#ff8a7b', // Lighter Coral Red
+    tertiary: '#f9e2de', // Very Light Coral Red (Background-like tone)
+  },
+  yellow: {
+    primary: '#ffe082', // Warm Yellow
+    secondary: '#fff3bf', // Light Yellow
+    tertiary: '#fff9e6', // Very Light Yellow (Background-like tone)
+  },
+  green: {
+    primary: '#499f68', // Shamrock Green
+    secondary: '#8ccaa3', // Lighter Shamrock Green
+    tertiary: '#d9ede0', // Very Light Shamrock Green (Background-like tone)
+  },
+  // Neutral Backgrounds
+  neutral: '#f5f5f5', // Light Gray (Main Background)
+  neutralLight: '#ffffff', // Pure White (Cards, Surfaces)
+  neutralDark: '#e0e0e0', // Slightly Darker Gray (Borders, Subtle Accents),
+  // Text Colors
+  text: '#1a1a1a', // Dark Text
+  textPrimary: '#1a1a1a', // Primary Dark Text
+  textSecondary: '#424242', // Secondary Dark Text
+  // Text Colors for Each Color Level
+  textColors: {
+    red: {
+      primary: '#ffffff', // White text on primary red
+      secondary: '#ffffff', // White text on secondary red
+      tertiary: '#1a1a1a', // Dark text on tertiary red
+    },
+    yellow: {
+      primary: '#1a1a1a', // Dark text on primary yellow
+      secondary: '#1a1a1a', // Dark text on secondary yellow
+      tertiary: '#1a1a1a', // Dark text on tertiary yellow
+    },
+    green: {
+      primary: '#ffffff', // White text on primary green
+      secondary: '#1a1a1a', // Dark text on secondary green
+      tertiary: '#1a1a1a', // Dark text on tertiary green
+    },
+    neutral: {
+      primary: '#1a1a1a', // Dark text on neutral
+      secondary: '#424242', // Secondary dark text on neutral
+      tertiary: '#616161', // Tertiary dark text on neutral
+    },
+  },
+} as const;
 
 export const Dark = {
-  primary: Pallette.pine_green[300], // Darker teal (#0c4942)
-  secondary: Pallette.shamrock_green[300], // Darker green (#2b5e3e)
-  tertiary: Pallette.cambridge_blue[300], // Darker light green (#407251)
-  neutral: Pallette.pine_green[100], // Very dark gray (#041816)
-  neutralLight: Pallette.shamrock_green[200], // Slightly lighter gray (#1d3f29)
-  accent: Pallette.burnt_sienna[500], // Slightly darker coral red (#e26d5a)
-  text: Pallette.baby_powder[500], // Light text (#fffffa)
-  textSecondary: Pallette.ash_gray.DEFAULT, // Original neutral color for secondary text (#c2c5bb)
-};
-
+  // Primary Colors (Red, Yellow, Green)
+  red: {
+    primary: '#ff312e', // Bright Red
+    secondary: '#e85b58', // Slightly Darker Red
+    tertiary: '#360f09', // Very Dark Red (Background-like tone)
+  },
+  yellow: {
+    primary: '#ffb74d', // Warm Yellow
+    secondary: '#e6a73b', // Slightly Darker Yellow
+    tertiary: '#2e2413', // Very Dark Yellow (Background-like tone)
+  },
+  green: {
+    primary: '#2e7d5a', // Dark Shamrock Green
+    secondary: '#4a8d6e', // Slightly Lighter Green
+    tertiary: '#15261b', // Very Dark Green (Background-like tone)
+  },
+  // Neutral Backgrounds
+  neutral: '#1a1a1a', // Dark Gray (Main Background)
+  neutralLight: '#2e2e2e', // Slightly Lighter Gray (Cards, Surfaces)
+  neutralDark: '#000000', // Pure Black (Borders, Subtle Accents),
+  // Text Colors
+  text: '#f5f5f5', // Light Text
+  textPrimary: '#ffffff', // Primary Light Text
+  textSecondary: '#c2c5bb', // Secondary Light Text
+  // Text Colors for Each Color Level
+  textColors: {
+    red: {
+      primary: '#ffffff', // White text on primary red
+      secondary: '#ffffff', // White text on secondary red
+      tertiary: '#ffffff', // White text on tertiary red
+    },
+    yellow: {
+      primary: '#1a1a1a', // Dark text on primary yellow
+      secondary: '#1a1a1a', // Dark text on secondary yellow
+      tertiary: '#ffffff', // Light text on tertiary yellow
+    },
+    green: {
+      primary: '#ffffff', // White text on primary green
+      secondary: '#ffffff', // White text on secondary green
+      tertiary: '#ffffff', // White text on tertiary green
+    },
+    neutral: {
+      primary: '#ffffff', // Light text on neutral
+      secondary: '#c2c5bb', // Secondary light text on neutral
+      tertiary: '#a6a6a6', // Tertiary light text on neutral
+    },
+  },
+} as const;

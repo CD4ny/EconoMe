@@ -36,10 +36,10 @@ function MainStack() {
         },
         headerTintColor: colors.text,
         headerTitleStyle: {
-          fontWeight: 'bold',
+          fontWeight: '100',
         },
         headerRight: () => <DarkModeToggleButton />,
-        headerLeft: () => <Text>sadasd</Text>,
+        headerLeft: () => <></>
       }}
     >
       <Stack.Screen name="login" options={{ title: 'Login' }} />

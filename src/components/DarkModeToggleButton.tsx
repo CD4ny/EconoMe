@@ -1,7 +1,7 @@
 import { Pressable } from 'react-native';
 import React from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
-import { useTheme } from '../contexts/ThemeProvider';
+import { useTheme } from '@contexts/ThemeProvider';
 import { StyleSheet } from 'react-native';
 
 export default function DarkModeToggleButton() {
@@ -11,10 +11,10 @@ export default function DarkModeToggleButton() {
 
   const styles = StyleSheet.create({
     darkToggle: {
-      color: colors.neutralLight,
-      backgroundColor: colors.primary,
+      color: colors.text,
+      backgroundColor: colors.neutralLight,
       borderRadius: 12,
-      padding: 10,
+      padding: 5,
     },
   });
 
@@ -25,8 +25,8 @@ export default function DarkModeToggleButton() {
       }}
     >
       <MaterialIcons
-        name={isDarkMode ? 'dark-mode' : 'sunny'}
-        size={25}
+        name={isDarkMode ? 'sunny' : 'dark-mode'}
+        size={35}
         style={styles.darkToggle}
       />
     </Pressable>
